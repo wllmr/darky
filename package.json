@@ -12,7 +12,8 @@
     "test:coverage": "node --test --experimental-test-coverage --test-isolation=none --test-coverage-exclude='tests/**' tests/unit/*.test.cjs",
     "test:all": "npm run lint && npm run format:check && npm test && npm run test:rendering && npm run test:extension && npm run test:package",
     "test:package": "node scripts/test-package.cjs",
-    "build": "node scripts/build.cjs"
+    "build": "node scripts/build.cjs",
+    "store:assets": "node scripts/generate-store-assets.cjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

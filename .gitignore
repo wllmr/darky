@@ -4,3 +4,8 @@ dist/
 __pycache__/
 coverage/
 docs/superpowers/
+
+# Generated store upload bundle
+/marketing/store/darky-store-assets.zip
+/marketing/store/*.jpg
+/marketing/store/assets.json

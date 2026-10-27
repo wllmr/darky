@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  font-family: 'DejaVu Sans', Arial, sans-serif;
+  background: #121017;
+  color: #f6f2fc;
+  -webkit-font-smoothing: antialiased;
+}
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 87% 15%, #30213e 0%, #17121f 42%, #111015 79%);
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#c9a8ff06 1px, transparent 1px),
+    linear-gradient(90deg, #c9a8ff06 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.brand {
+  position: absolute;
+  left: 58px;
+  top: 38px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -1.2px;
+}
+.brand img {
+  width: 36px;
+  height: 36px;
+}
+.dot {
+  color: #c8adfc;
+}
+.eyebrow {
+  position: absolute;
+  top: 51px;
+  right: 60px;
+  color: #b5a9c8;
+  font-size: 11px;
+  letter-spacing: 2.3px;
+}
+.copy {
+  position: absolute;
+  left: 58px;
+  top: 110px;
+}
+.copy h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -2.4px;
+  margin: 0;
+}
+.copy p {
+  margin: 18px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #c0b8cc;
+}
+.browser {
+  position: absolute;
+  left: 58px;
+  top: 314px;
+  width: 1164px;
+  height: 428px;
+  overflow: hidden;
+  border: 1px solid #54455f;
+  background: #19171e;
+  box-shadow: 0 30px 70px #0005;
+}
+.bar {
+  height: 39px;
+  border-bottom: 1px solid #3d3446;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 7px;
+  background: #24202c;
+}
+.bar i {
+  width: 6px;
+  height: 6px;
+  background: #93869e;
+  border-radius: 50%;
+}
+.address {
+  font-size: 10px;
+  color: #c8bfce;
+  letter-spacing: 0.3px;
+  margin-left: 18px;
+}
+.browser > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.popup {
+  position: absolute;
+  left: 868px;
+  top: 283px;
+  width: 350px;
+  height: auto;
+  border: 1px solid #665372;
+  box-shadow: 0 15px 64px #0008;
+}
+.bottom {
+  position: absolute;
+  bottom: 25px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  color: #ab9fb9;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+.bottom b {
+  font-weight: 400;
+  color: #ceb7ee;
+}
+.settings .copy {
+  top: 129px;
+  width: 330px;
+}
+.settings .copy h1 {
+  font-size: 44px;
+  line-height: 1.17;
+}
+.settings .copy p {
+  font-size: 16px;
+  max-width: 300px;
+  line-height: 1.75;
+}
+.settings .browser {
+  left: 408px;
+  top: 132px;
+  width: 814px;
+  height: 605px;
+}
+.settings .browser > img {
+  width: 100%;
+  height: auto;
+}
+.feature-note {
+  margin-top: 32px;
+  border-left: 2px solid #bea0ee;
+  padding: 3px 0 3px 15px;
+  color: #d3c5e5;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.mini-tag {
+  position: absolute;
+  left: 58px;
+  bottom: 92px;
+  font-size: 11px;
+  color: #bdaacb;
+  letter-spacing: 1.6px;
+}
+.promo .brand {
+  left: 64px;
+  top: 63px;
+  font-size: 56px;
+  gap: 18px;
+  letter-spacing: -2px;
+}
+.promo .brand img {
+  width: 74px;
+  height: 74px;
+}
+.promo .copy {
+  left: 64px;
+  top: 204px;
+}
+.promo .copy h1 {
+  font-size: 65px;
+  letter-spacing: -3.3px;
+  line-height: 1.12;
+}
+.promo .copy p {
+  font-size: 18px;
+  color: #c3b7d3;
+  letter-spacing: 0.1px;
+  margin-top: 22px;
+}
+.art {
+  position: absolute;
+  left: 765px;
+  top: 80px;
+  width: 590px;
+  height: 410px;
+}
+.paper {
+  position: absolute;
+  width: 370px;
+  height: 280px;
+  border: 1px solid #8d78a6;
+  box-shadow: 0 24px 50px #0003;
+}
+.paper.light {
+  left: 122px;
+  top: 0;
+  background: #f6f0ff;
+  border-color: #d8c9ed;
+}
+.paper.dark {
+  left: 0;
+  top: 106px;
+  background: #24202e;
+  border-color: #655274;
+}
+.paper .chrome {
+  height: 31px;
+  border-bottom: 1px solid #ccbce0;
+  background: #e7dcf4;
+}
+.paper.dark .chrome {
+  background: #322a40;
+  border-color: #594768;
+}
+.paper .line {
+  height: 7px;
+  margin: 17px 25px;
+  background: #d2c2e5;
+  width: 240px;
+}
+.paper.dark .line {
+  background: #665676;
+}
+.paper .line.title {
+  height: 14px;
+  margin-top: 30px;
+  width: 195px;
+  background: #7c6298;
+}
+.paper.dark .line.title {
+  background: #c2a6e1;
+}
+.paper .line.short {
+  width: 170px;
+}
+.paper .line.tiny {
+  width: 112px;
+}
+.orb {
+  position: absolute;
+  left: 237px;
+  top: 151px;
+  width: 152px;
+  height: 152px;
+  filter: drop-shadow(0 14px 25px #0006);
+}
+.promo .fine {
+  position: absolute;
+  bottom: 47px;
+  left: 67px;
+  color: #a594b8;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+}
+.small .brand {
+  top: 30px;
+  left: 28px;
+  font-size: 37px;
+  gap: 11px;
+  letter-spacing: -1.5px;
+}
+.small .brand img {
+  width: 49px;
+  height: 49px;
+}
+.small .art {
+  left: 240px;
+  top: 96px;
+  transform: scale(0.36);
+  transform-origin: top left;
+}
+.small .copy {
+  left: 30px;
+  top: 185px;
+}
+.small .copy h1 {
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+.small .copy p {
+  font-size: 12px;
+  margin-top: 7px;
+}
+.small .fine {
+  display: none;
+}
+
+/* Store screenshots use factual captions and give the product most of the frame. */
+.product .canvas {
+  background: #141319;
+}
+.product .copy {
+  top: 108px;
+}
+.product .copy h1 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+.product .copy p {
+  margin-top: 12px;
+  font-size: 15px;
+}
+.product .browser {
+  top: 213px;
+  height: 529px;
+}
+.product .popup {
+  top: 252px;
+  width: 380px;
+  left: 820px;
+}
+.product.settings .copy {
+  top: 108px;
+  width: auto;
+}
+.product.settings .copy p {
+  max-width: none;
+}
+.product.settings .feature-note {
+  display: none;
+}
+.product.settings .browser {
+  left: 180px;
+  top: 208px;
+  width: 920px;
+  height: 538px;
+}
