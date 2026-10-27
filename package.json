@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/unit/*.test.cjs",
+    "test:rendering": "node tests/browser/check-rendering.cjs && node tests/browser/check-popup.cjs && node tests/browser/check-options.cjs",
+    "test:extension": "node tests/browser/check-extension.cjs",
+    "icons": "node scripts/generate-icons.cjs",
+    "package": "npm run build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:coverage": "node --test --experimental-test-coverage --test-isolation=none --test-coverage-exclude='tests/**' tests/unit/*.test.cjs",
+    "test:all": "npm run lint && npm run format:check && npm test && npm run test:rendering && npm run test:extension && npm run test:package",
+    "test:package": "node scripts/test-package.cjs",
+    "build": "node scripts/build.cjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "playwright": "^1.64.1",
+    "prettier": "^3.9.10"
+  }
+}
