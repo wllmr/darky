@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Darky",
+  "version": "0.4.4",
+  "description": "A quieter web. Dark, light, or system themes with per-site controls and comfortable brightness.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_title": "Darky",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "src/assets/icons/dark16.png",
+      "32": "src/assets/icons/dark32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "src/shared/settings.js",
+        "src/content/theme-detection.js",
+        "src/content/theme-styles.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "src/assets/icons/dark16.png",
+    "32": "src/assets/icons/dark32.png",
+    "48": "src/assets/icons/dark48.png",
+    "128": "src/assets/icons/dark128.png"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  }
+}

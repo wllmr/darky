@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saved sites · Darky</title>
+    <link rel="stylesheet" href="../shared/ui.css" />
+    <link rel="stylesheet" href="options.css" />
+    <script src="../shared/settings.js" defer></script>
+    <script src="../shared/ui-theme.js" defer></script>
+    <script src="options.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img
+          id="logo"
+          src="../assets/icons/dark32.png"
+          alt="Darky dark"
+          width="28"
+          height="28"
+        />darky<span class="dot" aria-hidden="true">.</span>
+      </div>
+      <span class="caption">Your web, your light.</span>
+    </header>
+    <main>
+      <div class="intro">
+        <h1>Saved sites</h1>
+        <p>
+          Fine-tune a website, or reset it to your defaults. Changes apply to open pages
+          automatically.
+        </p>
+      </div>
+      <p id="paused" hidden>
+        Darky is paused. Your changes are saved and will apply when you turn it back on.
+      </p>
+      <div class="toolbar">
+        <label class="sr-only" for="search">Search saved sites</label
+        ><input
+          id="search"
+          type="search"
+          placeholder="Search websites…"
+          autocomplete="off"
+          spellcheck="false"
+        /><span id="count" aria-live="polite"></span>
+      </div>
+      <div id="sites" aria-label="Saved website settings"></div>
+      <div id="empty"><h2>Loading saved sites…</h2></div>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p class="help">
+        Original keeps the website’s colors; brightness still applies. Reset site removes its custom
+        settings. Your global defaults stay the same.
+      </p>
+    </main>
+    <footer>Stored on this device. No account, tracking, or cloud sync.</footer>
+  </body>
+</html>

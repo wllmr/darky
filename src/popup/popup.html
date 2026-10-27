@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Darky</title>
+    <link rel="stylesheet" href="../shared/ui.css" />
+    <script src="../shared/settings.js" defer></script>
+    <script src="../shared/ui-theme.js" defer></script>
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <img id="logo" src="../assets/icons/dark32.png" alt="Darky dark" width="26" height="26" />
+        darky<span class="dot" aria-hidden="true">.</span>
+      </div>
+      <label class="toggle" title="Pause or resume all Darky effects, including brightness"
+        ><span id="power-state">On</span><span class="sr-only"> — enable all Darky effects</span
+        ><input id="enabled" type="checkbox" role="switch" disabled /><span
+          class="switch"
+          aria-hidden="true"
+        ></span
+      ></label>
+    </header>
+    <main>
+      <section aria-labelledby="defaults-heading">
+        <div class="section-heading">
+          <h1 id="defaults-heading">YOUR DEFAULTS</h1>
+          <span class="caption">All websites</span>
+        </div>
+        <div class="row">
+          <label for="theme">Appearance</label
+          ><select id="theme" disabled>
+            <option value="dark">☾ Dark</option>
+            <option value="light">☀ Light</option>
+            <option value="system">◐ Follow system</option>
+            <option value="original">Original</option>
+          </select>
+        </div>
+        <div class="slider-row global-brightness">
+          <label for="brightness">Brightness</label
+          ><input id="brightness" type="range" min="50" max="110" value="100" disabled /><output
+            id="brightness-value"
+            for="brightness"
+            >100%</output
+          >
+        </div>
+        <div class="reset-row">
+          <button
+            id="reset-brightness"
+            type="button"
+            title="Clear custom brightness on every website"
+            disabled
+          >
+            Reset site brightness everywhere
+          </button>
+        </div>
+      </section>
+      <section class="site-card" aria-labelledby="hostname">
+        <div class="section-heading">
+          <div class="site-title">
+            <span class="site-icon" aria-hidden="true">◎</span>
+            <h2 id="hostname">This website</h2>
+          </div>
+          <button
+            id="reset-site"
+            type="button"
+            title="Reset this site's appearance and brightness"
+            disabled
+          >
+            Reset
+          </button>
+        </div>
+        <p id="site-effect" role="status" aria-live="polite">Checking appearance…</p>
+        <div class="row">
+          <label for="site-theme">Appearance</label
+          ><select id="site-theme" disabled>
+            <option value="default">Use default</option>
+            <option value="dark">☾ Dark</option>
+            <option value="light">☀ Light</option>
+            <option value="system">◐ Follow system</option>
+            <option value="original">Original</option>
+          </select>
+        </div>
+        <div class="slider-row">
+          <label for="site-brightness"
+            >Brightness <small id="site-brightness-state">Default</small></label
+          ><input
+            id="site-brightness"
+            type="range"
+            min="50"
+            max="110"
+            value="100"
+            disabled
+          /><output id="site-brightness-value" for="site-brightness">100%</output>
+        </div>
+      </section>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+      <button id="manage-sites" type="button">Saved sites</button
+      ><span class="live-dot" aria-hidden="true"></span> Saved on your device
+    </footer>
+  </body>
+</html>
